@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form Validation</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <form novalidate id="my-form">
+      <div id="heading">
+        Please enter the following information (all fields required):
+      </div>
+      <div id="email" class="field">
+        <label for="email-input">Email:</label>
+        <div class="input-box">
+          <input type="email" id="email-input" required />
+          <span class="email error"></span>
+        </div>
+      </div>
+      <div id="country" class="field">
+        <label for="country-input">Country:</label>
+        <div class="input-box">
+          <input
+            type="text"
+            id="country-input"
+            required
+            minlength="2"
+            maxlength="25"
+          />
+          <span class="country error"></span>
+        </div>
+      </div>
+      <div id="postal" class="field">
+        <label for="postal-input">Postal/Zip code:</label>
+        <div class="input-box">
+          <input
+            type="text"
+            id="postal-input"
+            required
+            minlength="4"
+            maxlength="15"
+          />
+          <span class="postal error"></span>
+        </div>
+      </div>
+      <div id="password" class="field">
+        <label for="password-input">Password:</label>
+        <div class="input-box">
+          <input
+            type="password"
+            id="password-input"
+            required
+            minlength="8"
+            maxlength="16"
+          />
+          <span class="password error"></span>
+        </div>
+      </div>
+      <div id="password-confirm" class="field">
+        <label for="password-confirm-input">Password confirmation:</label>
+        <div class="input-box">
+          <input
+            type="password"
+            id="password-confirm-input"
+            required
+            minlength="8"
+            maxlength="16"
+          />
+          <span class="password-confirm error"></span>
+        </div>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+    <script rel="javascript" src="index.js"></script>
+  </body>
+</html>
